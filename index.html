@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Funções de Arrays em JavaScript</title>
+  </head>
+  <body>
+    <h1 class="spartans">Spartans</h1>
+        <p class="paragrafo-participantes"> - Ítalo Campos <br>
+            - Marcus Vinicius <br>
+            - Samir Queiroz <br>
+            - João Victor
+        </p>
+    
+    <h2 class="funcoes">Funções de Arrays em JavaScript</h2>
+
+    <h2>1. splice()</h2>
+    <p>
+      A função <code>splice()</code> altera o conteúdo de um array removendo ou
+      substituindo elementos existentes e/ou adicionando novos elementos.
+    </p>
+    <pre><code>
+const frutas = ['maçã', 'banana', 'laranja'];
+frutas.splice(1, 1, 'manga'); // Remove 1 elemento na posição 1 e adiciona 'manga'
+console.log(frutas); // ['maçã', 'manga', 'laranja']
+    </code></pre>
+
+    <h2>2. concat()</h2>
+    <p>
+      A função <code>concat()</code> é usada para unir dois ou mais arrays. Ela
+      retorna um novo array sem alterar os arrays originais.
+    </p>
+    <pre><code>
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+const arrayConcatenado = array1.concat(array2);
+console.log(arrayConcatenado); // [1, 2, 3, 4, 5, 6]
+    </code></pre>
+
+    <h2>3. includes()</h2>
+    <p>
+      A função <code>includes()</code> verifica se um array contém um
+      determinado elemento, retornando <code>true</code> ou <code>false</code>.
+    </p>
+    <pre><code>
+const numeros = [1, 2, 3, 4, 5];
+const temTres = numeros.includes(3); // true
+console.log(temTres); // true
+    </code></pre>
+
+    <h2>4. filter()</h2>
+    <p>
+      A função <code>filter()</code> cria um novo array com todos os elementos
+      que passam em um teste definido por uma função fornecida.
+    </p>
+    <pre><code>
+const numeros = [1, 2, 3, 4, 5];
+const pares = numeros.filter(num => num % 2 === 0);
+console.log(pares); // [2, 4]
+    </code></pre>
+
+    <h2>5. find()</h2>
+    <p>
+      A função <code>find()</code> retorna o primeiro elemento que satisfaz a
+      condição fornecida em uma função. Se nenhum elemento for encontrado,
+      retorna <code>undefined</code>.
+    </p>
+    <pre><code>
+const numeros = [1, 2, 3, 4, 5];
+const primeiroPar = numeros.find(num => num % 2 === 0);
+console.log(primeiroPar); // 2
+    </code></pre>
+  </body>
+</html>
